@@ -1,0 +1,171 @@
+{
+  "heroes": [
+    {
+      "id": "civil",
+      "index": "DOSSIER 01",
+      "name": "MARC VELIN",
+      "role": "Le civil poussé à bout",
+      "premise": "23 h 47. Métro désert. Deux corps au sol. Le troisième homme s'enfuit avec ton visage en mémoire.",
+      "question": "À quel moment survivre devient-il choisir qui mérite de vivre ?",
+      "scenes": [
+        {
+          "id": "civil-platform", "timer": 14,
+          "reality": "Le dernier agresseur remonte le quai en boitant. Il crie qu'il appellera la police. Ton arme illégale est encore chaude. Une rame arrive dans quatre minutes.",
+          "detail": "CAMÉRA QUAI B · TÉMOIN EN FUITE · 23:47:18",
+          "psyche": [
+            {"speaker":"voice","text":"Deux hommes sont morts. Pose l'arme. Ne fabrique pas un troisième cadavre."},
+            {"speaker":"thought","text":"Il a vu ton visage. Il connaît ta veste. Dans une heure, tu seras identifié."},
+            {"speaker":"voice","text":"Tu as eu peur. Dis-le. Reste ici et appelle les secours."},
+            {"speaker":"thought","text":"La peur n'efface pas les empreintes. Lui, si."}
+          ],
+          "choices": [
+            {"id":"chase","text":"Le poursuivre dans le tunnel","tone":"descent","dehumanization":3,"hunted":2},
+            {"id":"wipe-gun","text":"Ramasser les douilles et quitter le quai","tone":"descent","dehumanization":2,"hunted":3},
+            {"id":"freeze","text":"Tirer dans sa direction sans viser","tone":"panic","dehumanization":2,"hunted":4},
+            {"id":"call","text":"Poser l'arme et appeler les secours","tone":"resistance","dehumanization":-3,"hunted":1}
+          ]
+        },
+        {
+          "id":"civil-camera", "timer": 13,
+          "reality": "Une caméra a enregistré la scène. Le local technique est entrouvert. Du sang sur ta manche commence à sécher. Au loin, des sirènes se rapprochent.",
+          "detail": "ANGLE MORT ESTIMÉ : 11 SECONDES",
+          "psyche": [
+            {"speaker":"thought","text":"Le disque du local contient la seule version que le tribunal croira."},
+            {"speaker":"voice","text":"Détruire l'image ne change pas ce que tu as fait."},
+            {"speaker":"thought","text":"La vérité est un fichier. Un fichier peut disparaître."},
+            {"speaker":"voice","text":"Chaque geste après les tirs devient un choix, pas un accident."}
+          ],
+          "choices": [
+            {"id":"destroy-drive","text":"Arracher le disque de vidéosurveillance","tone":"descent","dehumanization":2,"hunted":2},
+            {"id":"stage-scene","text":"Placer l'arme d'un mort dans sa main","tone":"descent","dehumanization":3,"hunted":2},
+            {"id":"run-tracks","text":"Fuir par les voies","tone":"panic","dehumanization":1,"hunted":4},
+            {"id":"wait-police","text":"S'asseoir, mains visibles, et attendre","tone":"resistance","dehumanization":-2,"hunted":0}
+          ]
+        },
+        {
+          "id":"civil-home", "timer": 14,
+          "reality": "Ton téléphone vibre. « Papa, tu rentres quand ? » La police boucle déjà deux stations. Sur les réseaux, on parle d'un tireur en fuite.",
+          "detail": "BATTERIE 8 % · PÉRIMÈTRE EN COURS DE FERMETURE",
+          "psyche": [
+            {"speaker":"voice","text":"Ta fille mérite un père coupable qui dit la vérité, pas un fantôme."},
+            {"speaker":"thought","text":"En prison, tu ne seras plus son père. Seulement un nom interdit."},
+            {"speaker":"voice","text":"Ne transforme pas son amour en alibi."},
+            {"speaker":"thought","text":"Tout ce qui compte exige maintenant que tu ne sois pas pris."}
+          ],
+          "choices": [
+            {"id":"burn-clothes","text":"Brûler les vêtements chez toi","tone":"descent","dehumanization":2,"hunted":2},
+            {"id":"false-alibi","text":"Demander un faux alibi à ton frère","tone":"descent","dehumanization":2,"hunted":3},
+            {"id":"take-child","text":"Prendre ta fille et partir immédiatement","tone":"panic","dehumanization":1,"hunted":5},
+            {"id":"lawyer","text":"Appeler un avocat puis se rendre","tone":"resistance","dehumanization":-3,"hunted":0}
+          ]
+        }
+      ],
+      "finals": {
+        "descent": {
+          "id":"civil-final-descent","timer":12,"reality":"Le témoin a été retrouvé. Il accepte de se taire contre de l'argent, mais il a envoyé une copie de son témoignage à un proche. Tu n'es plus un homme acculé : tu gères un problème.","detail":"AUCUNE SORTIE PROPRE",
+          "psyche":[{"speaker":"thought","text":"Tu as déjà payé le prix moral. Il reste à obtenir le résultat."},{"speaker":"voice","text":"Tu t'entends ? Il a un nom. Une vie. Comme toi."},{"speaker":"thought","text":"Un témoin vivant est une condamnation différée."},{"speaker":"voice","text":"Arrête. Même si arrêter ne te sauve plus."}],
+          "choices":[
+            {"id":"c-d1","text":"Organiser sa disparition","tone":"descent","dehumanization":4,"hunted":3,"ending":"c01"},
+            {"id":"c-d2","text":"Le payer et vivre sous sa menace","tone":"descent","dehumanization":2,"hunted":4,"ending":"c02"},
+            {"id":"c-d3","text":"Le braquer ; le coup part","tone":"panic","dehumanization":3,"hunted":5,"ending":"c03"},
+            {"id":"c-d4","text":"Tout avouer, preuves comprises","tone":"resistance","dehumanization":-4,"hunted":0,"ending":"c04"}
+          ]
+        },
+        "resistance": {
+          "id":"civil-final-resistance","timer":12,"reality":"Dans le commissariat, l'arme est au sol. Un policier hurle de lever les mains. Derrière la vitre, le témoin te reconnaît. Il tremble autant que toi.","detail":"ORDRES CONTRADICTOIRES · ARMES BRAQUÉES",
+          "psyche":[{"speaker":"voice","text":"Lentement. Mains ouvertes. Accepte ce qui vient."},{"speaker":"thought","text":"Ils ont déjà choisi le récit : tireur dangereux neutralisé."},{"speaker":"voice","text":"La justice sera dure. Mais tu seras encore vivant pour répondre."},{"speaker":"thought","text":"Ou tu mourras docilement dans leur version des faits."}],
+          "choices":[
+            {"id":"c-r1","text":"Obéir sans un geste de plus","tone":"resistance","dehumanization":-3,"hunted":0,"ending":"c05"},
+            {"id":"c-r2","text":"Livrer aussi ceux qui t'ont vendu l'arme","tone":"resistance","dehumanization":-2,"hunted":2,"ending":"c06"},
+            {"id":"c-r3","text":"Saisir l'arme dans un réflexe","tone":"panic","dehumanization":2,"hunted":5,"ending":"c07"},
+            {"id":"c-r4","text":"Nier et réclamer les vidéos","tone":"descent","dehumanization":2,"hunted":2,"ending":"c08"}
+          ]
+        },
+        "panic": {
+          "id":"civil-final-panic","timer":10,"reality":"Tu conduis trop vite. Ta fille est à l'arrière, sans manteau. Un barrage ferme le pont. Elle demande pourquoi tu pleures. Les gyrophares remplissent l'habitacle.","detail":"80 MÈTRES AVANT LE BARRAGE",
+          "psyche":[{"speaker":"thought","text":"Accélère. Ils n'oseront pas tirer avec une enfant."},{"speaker":"voice","text":"Tu l'utilises comme bouclier. Regarde-la."},{"speaker":"thought","text":"Derrière toi : la prison. Devant : une probabilité."},{"speaker":"voice","text":"Freine. Maintenant. Même si c'est trop tard pour toi."}],
+          "choices":[
+            {"id":"c-p1","text":"Forcer le barrage","tone":"panic","dehumanization":3,"hunted":5,"ending":"c09"},
+            {"id":"c-p2","text":"Abandonner la voiture et courir","tone":"panic","dehumanization":2,"hunted":5,"ending":"c10"},
+            {"id":"c-p3","text":"Prendre un policier en otage","tone":"descent","dehumanization":5,"hunted":5,"ending":"c11"},
+            {"id":"c-p4","text":"Freiner et jeter les clés dehors","tone":"resistance","dehumanization":-3,"hunted":0,"ending":"c12"}
+          ]
+        }
+      },
+      "endings": {
+        "c01":{"title":"L'homme qui réglait les problèmes","verdict":"IMPUNITÉ GLACIALE","text":"Le témoin disparaît. L'enquête s'épuise. Tu rentres chaque soir auprès de ta fille, mais tu ne touches plus jamais une poignée sans imaginer des empreintes."},
+        "c02":{"title":"La laisse invisible","verdict":"PARANOÏA","text":"Tu paies pendant huit ans. Chaque vibration devient une menace. Quand le témoin meurt d'une cause banale, tu continues pourtant les virements."},
+        "c03":{"title":"Trois secondes de trop","verdict":"MORT","text":"Le coup attire une patrouille. Tu poses l'arme comme ta conscience le demandait enfin. Un agent voit ton mouvement trop tard et tire deux fois."},
+        "c04":{"title":"La bonté tardive","verdict":"RÉCLUSION","text":"Tes aveux éclairent tout, y compris la préméditation après les premiers tirs. Le juge ne confond pas remords et innocence. Vingt-six ans."},
+        "c05":{"title":"Répondre","verdict":"PRISON","text":"La légitime défense ne couvre pas le second tir. Tu es condamné, mais le témoin vit. Ta fille vient d'abord chaque semaine, puis chaque mois."},
+        "c06":{"title":"La dette des vivants","verdict":"PROTECTION","text":"Ton témoignage fait tomber un trafic. La peine reste lourde. En détention, ton nom circule. La vérité ne protège pas des couloirs sans caméra."},
+        "c07":{"title":"Le geste","verdict":"MORT","text":"Tu voulais seulement éloigner l'arme du sol. Les policiers voient une main qui plonge. Ta fille apprendra la nuance dans le rapport d'autopsie."},
+        "c08":{"title":"Le récit commode","verdict":"CONDAMNATION","text":"Les vidéos contredisent ton mensonge. Ton refus d'assumer détruit la seule circonstance atténuante. Tu deviens le monstre simple dont le journal avait besoin."},
+        "c09":{"title":"Le pont","verdict":"CATASTROPHE","text":"La voiture heurte la herse et se retourne. Tu survis. Ta fille non. La prison n'est plus une punition : seulement l'endroit où le matin recommence."},
+        "c10":{"title":"Cent vingt mètres","verdict":"ARRESTATION","text":"Tu cours cent vingt mètres avant de tomber. Ta fille reste seule dans la voiture. Elle ne te pardonnera pas d'avoir essayé de la laisser derrière."},
+        "c11":{"title":"La dernière escalade","verdict":"NEUTRALISÉ","text":"Tu prends un homme pour acheter trente secondes. Les tireurs d'élite en ont besoin de quatre. Ton histoire se termine dans le commentaire d'un flash info."},
+        "c12":{"title":"Les clés sur l'asphalte","verdict":"CAPITULATION","text":"Tu freines. Personne ne meurt au barrage. Cela ne rachète rien, mais cela empêche une faute de plus. Certaines victoires ne sont que des désastres interrompus."}
+      }
+    },
+    {
+      "id":"agent","index":"DOSSIER 02","name":"NOÉ SERRAN","role":"L'agent du système","premise":"Un laboratoire propre. Une clé USB escamotée par ton supérieur. « Les règles protègent parfois les coupables. »","question":"Obéir, est-ce encore choisir quand l'autorité porte un visage admiré ?",
+      "scenes":[
+        {"id":"agent-usb","timer":14,"reality":"Le commandant Varga glisse la clé USB dans sa poche. Elle innocente peut-être le suspect principal. Il te regarde : « Tu n'as rien vu. On le tient enfin. »","detail":"SCELLÉ 17-B · RUPTURE DE CHAÎNE",
+        "psyche":[{"speaker":"voice","text":"Cette preuve ne lui appartient pas. Le suspect a droit à la vérité."},{"speaker":"thought","text":"Varga a trente ans de terrain. Toi, six mois et un badge provisoire."},{"speaker":"voice","text":"Son prestige ne transforme pas un vol en procédure."},{"speaker":"thought","text":"Contredis-le maintenant et toute l'unité saura ton nom."}],
+        "choices":[{"id":"note-silence","text":"Modifier discrètement l'inventaire","tone":"descent","dehumanization":2,"hunted":2},{"id":"look-away","text":"Ne rien écrire et détourner les yeux","tone":"descent","dehumanization":1,"hunted":2},{"id":"confront","text":"L'accuser à voix haute devant l'équipe","tone":"panic","dehumanization":0,"hunted":4},{"id":"duplicate","text":"Copier le registre et signaler l'anomalie","tone":"resistance","dehumanization":-2,"hunted":2}]},
+        {"id":"agent-report","timer":13,"reality":"Varga te demande de dater un prélèvement de la veille. La fausse date rendra la perquisition recevable. Les collègues signent sans lever les yeux.","detail":"SIGNATURE NUMÉRIQUE REQUISE",
+        "psyche":[{"speaker":"thought","text":"Le suspect est dangereux. Une date ne change pas ce qu'il est."},{"speaker":"voice","text":"Tu ne sais pas ce qu'il est. Tu sais seulement ce que tu falsifies."},{"speaker":"thought","text":"Refuser, c'est laisser sortir quelqu'un qui recommencera."},{"speaker":"voice","text":"Alors l'institution te demande de devenir ce qu'elle poursuit."}],
+        "choices":[{"id":"sign","text":"Signer et valider la fausse date","tone":"descent","dehumanization":2,"hunted":2},{"id":"teach-others","text":"Automatiser la modification pour l'équipe","tone":"descent","dehumanization":3,"hunted":1},{"id":"delete-all","text":"Effacer le rapport entier","tone":"panic","dehumanization":2,"hunted":4},{"id":"refuse-mail","text":"Refuser par écrit, copie à l'inspection","tone":"resistance","dehumanization":-2,"hunted":3}]},
+        {"id":"agent-pressure","timer":14,"reality":"Ton casier a été fouillé. Une enveloppe contient des photos de ton compagnon sortant du travail. Varga sourit dans le couloir : « On protège les nôtres. »","detail":"AUCUNE TRACE D'EFFRACTION",
+        "psyche":[{"speaker":"voice","text":"Ils ont franchi la ligne. Pars avec les copies."},{"speaker":"thought","text":"Si tu pars, ils contrôlent l'enquête, les fichiers et ton dossier disciplinaire."},{"speaker":"voice","text":"Demande de l'aide hors de cette chaîne de commandement."},{"speaker":"thought","text":"Il n'y a pas de dehors. Seulement un autre bureau qui appelle Varga."}],
+        "choices":[{"id":"give-copy","text":"Rendre les copies et rejoindre le groupe","tone":"descent","dehumanization":2,"hunted":1},{"id":"frame-colleague","text":"Faire porter la fuite à une collègue","tone":"descent","dehumanization":4,"hunted":2},{"id":"public-post","text":"Tout publier sans vérifier les pièces","tone":"panic","dehumanization":1,"hunted":5},{"id":"judge","text":"Remettre un dossier scellé à une juge","tone":"resistance","dehumanization":-3,"hunted":4}]}
+      ],
+      "finals":{
+        "descent":{"id":"agent-final-descent","timer":12,"reality":"Varga est suspendu. L'unité attend que tu nettoies les journaux d'accès avant la saisie des serveurs. Tu connais maintenant chaque faille du système.","detail":"AUDIT DANS 09 MINUTES","psyche":[{"speaker":"thought","text":"Efface. Tu ne protèges plus Varga, tu protèges tous ceux qui ont obéi."},{"speaker":"voice","text":"Tu protèges surtout la personne que tu es devenue."},{"speaker":"thought","text":"Le système survivra. Choisis de survivre avec lui."},{"speaker":"voice","text":"Il reste neuf minutes pour cesser d'être son outil."}],"choices":[{"id":"a-d1","text":"Purger tous les journaux","tone":"descent","dehumanization":4,"hunted":2,"ending":"a01"},{"id":"a-d2","text":"Conserver un moyen de faire chanter Varga","tone":"descent","dehumanization":3,"hunted":3,"ending":"a02"},{"id":"a-d3","text":"Déclencher un incendie électrique","tone":"panic","dehumanization":3,"hunted":5,"ending":"a03"},{"id":"a-d4","text":"Remettre les accès aux enquêteurs","tone":"resistance","dehumanization":-4,"hunted":2,"ending":"a04"}]},
+        "resistance":{"id":"agent-final-resistance","timer":12,"reality":"L'inspection te reçoit au sous-sol. L'enquêtrice éteint l'enregistreur : « Donne-nous Varga, et nous oublierons tes premières signatures. »","detail":"ENTRETIEN NON ENREGISTRÉ","psyche":[{"speaker":"voice","text":"Dis tout. Même ta part. Sinon tu reproduis leur marché."},{"speaker":"thought","text":"Un témoin utile négocie. Un idéaliste devient une pièce à conviction."},{"speaker":"voice","text":"La vérité amputée servira le prochain abus."},{"speaker":"thought","text":"La vérité complète te condamnera avec eux."}],"choices":[{"id":"a-r1","text":"Tout avouer, y compris tes falsifications","tone":"resistance","dehumanization":-3,"hunted":2,"ending":"a05"},{"id":"a-r2","text":"Témoigner uniquement sur Varga","tone":"resistance","dehumanization":-1,"hunted":2,"ending":"a06"},{"id":"a-r3","text":"Fuir avec le dossier original","tone":"panic","dehumanization":1,"hunted":5,"ending":"a07"},{"id":"a-r4","text":"Accepter l'accord et mentir sous serment","tone":"descent","dehumanization":3,"hunted":2,"ending":"a08"}]},
+        "panic":{"id":"agent-final-panic","timer":10,"reality":"Les documents sont en ligne. Certains sont faux, mêlés par Varga aux vrais. Ton adresse circule. Une voiture ralentit devant chez toi.","detail":"TÉLÉPHONE COMPROMIS","psyche":[{"speaker":"thought","text":"Accuse tout le monde avant qu'ils fabriquent ton rôle."},{"speaker":"voice","text":"Ton compagnon est dedans. Éloigne-le, puis rends-toi."},{"speaker":"thought","text":"Se rendre à ceux que tu as exposés n'est pas une stratégie."},{"speaker":"voice","text":"Continuer seul n'est plus du courage. C'est de la panique."}],"choices":[{"id":"a-p1","text":"Publier les noms des familles des agents","tone":"panic","dehumanization":4,"hunted":5,"ending":"a09"},{"id":"a-p2","text":"Disparaître avec de faux papiers","tone":"panic","dehumanization":2,"hunted":5,"ending":"a10"},{"id":"a-p3","text":"Piéger Varga pour obtenir des aveux","tone":"descent","dehumanization":4,"hunted":5,"ending":"a11"},{"id":"a-p4","text":"Se présenter à un avocat indépendant","tone":"resistance","dehumanization":-3,"hunted":2,"ending":"a12"}]}
+      },
+      "endings":{
+        "a01":{"title":"Continuité de service","verdict":"PROMOTION","text":"Les journaux disparaissent. Faute de preuves, l'affaire se vide. On te confie le nouveau protocole d'intégrité. Tu le rédiges en sachant exactement comment le contourner."},
+        "a02":{"title":"L'assurance-vie","verdict":"CORRUPTION","text":"Tu gardes une copie. Varga aussi en avait une sur toi. Vous vieillissez en vous tenant mutuellement par la gorge, deux piliers irréprochables du service."},
+        "a03":{"title":"Court-circuit","verdict":"CONDAMNATION","text":"Le feu blesse une agente d'entretien. Les sauvegardes hors site survivent. Tu deviens le seul coupable facile d'une corruption qui, elle, reste en poste."},
+        "a04":{"title":"Trop tard pour être innocent","verdict":"TRAHISON","text":"Tes accès permettent les inculpations. Ils prouvent aussi tes propres actes. Le système accepte ton aide, puis te juge sans indulgence. Tu savais ce que tu faisais."},
+        "a05":{"title":"Déposition complète","verdict":"ISOLEMENT","text":"Varga tombe. Toi aussi. Dix-huit mois avec sursis, carrière détruite, appels anonymes. Ton compagnon part. La vérité gagne le dossier et perd tout le reste."},
+        "a06":{"title":"Le témoin utile","verdict":"SURVIE","text":"Ton omission te sauve. Des années plus tard, un innocent demande la révision d'une expertise que tu avais signée. Ton silence d'aujourd'hui devient sa cellule."},
+        "a07":{"title":"Chaîne de garde","verdict":"DISCRÉDIT","text":"En fuyant, tu romps la traçabilité des pièces. Les avocats font annuler l'affaire. Varga est réintégré. Tes preuves vraies ne valent plus rien."},
+        "a08":{"title":"Sous serment","verdict":"INTÉGRATION","text":"Tu livres la version attendue. L'inspection te protège et t'embauche. Tu apprends que la réforme d'un système commence parfois par choisir ses mensonges officiels."},
+        "a09":{"title":"Dommages collatéraux","verdict":"CHAOS","text":"Une adresse déclenche une agression. Ce n'est pas Varga qui est frappé mais son fils. La cause que tu croyais défendre porte désormais le visage d'un enfant."},
+        "a10":{"title":"Hors registre","verdict":"EFFACEMENT","text":"Tu disparais. Aucun procès ne rétablit les faits. Varga fait de toi l'architecte unique du réseau. Ton innocence survit seulement dans une valise jamais ouverte."},
+        "a11":{"title":"La chambre sourde","verdict":"MORT","text":"Varga comprend le piège. La police trouve ton corps et un message d'adieu parfaitement formulé. Le rapport technique porte la signature d'un ancien collègue."},
+        "a12":{"title":"Le dossier vivant","verdict":"PROTECTION PRÉCAIRE","text":"L'avocate diffuse des copies à trois rédactions. Tu survis, sous protection. L'enquête avance. Chaque voiture qui ralentit te rappelle que résister n'est pas être sauvé."}
+      }
+    },
+    {
+      "id":"banker","index":"DOSSIER 03","name":"LINA KER","role":"L'opportuniste par nécessité","premise":"Une dette criminelle. Une mère à opérer. Un compte inactif et un transfert assez petit pour n'alarmer personne.","question":"La nécessité excuse-t-elle le premier vol, ou prépare-t-elle seulement le suivant ?",
+      "scenes":[
+        {"id":"bank-first","timer":14,"reality":"Le compte de M. Dervaux dort depuis onze ans. 3 800 € couvriraient l'acompte de l'hôpital. Le logiciel demande un motif de dérogation.","detail":"CLIENT INACTIF · AUCUN HÉRITIER IDENTIFIÉ","psyche":[{"speaker":"voice","text":"Ce n'est pas ton argent. Demande un délai, encore une fois."},{"speaker":"thought","text":"L'hôpital n'opère pas les principes. Il opère après paiement."},{"speaker":"voice","text":"Une fraude laisse une trace même quand personne ne regarde."},{"speaker":"thought","text":"Une trace minuscule contre une urgence immense. Valide."}],"choices":[{"id":"transfer","text":"Transférer 3 800 € via un compte tampon","tone":"descent","dehumanization":2,"hunted":2},{"id":"fees","text":"Déguiser la somme en frais de gestion","tone":"descent","dehumanization":2,"hunted":1},{"id":"max-withdraw","text":"Vider tout le compte d'un coup","tone":"panic","dehumanization":3,"hunted":5},{"id":"cancel-loan","text":"Annuler et demander un prêt à ton nom","tone":"resistance","dehumanization":-2,"hunted":1}]},
+        {"id":"bank-debt","timer":13,"reality":"Le prêteur appelle : la dette a doublé. Il connaît l'école de ton neveu. Un collègue remarque la dérogation sur Dervaux et te demande si tu veux qu'il la corrige.","detail":"APPEL MASQUÉ · 06:12","psyche":[{"speaker":"thought","text":"Ton collègue offre une porte. Fais-en un complice avant qu'il devienne un témoin."},{"speaker":"voice","text":"Il te tend de l'aide, pas une faiblesse à exploiter."},{"speaker":"thought","text":"Les scrupules n'accompagnent pas les enfants à l'école."},{"speaker":"voice","text":"Préviens la police. La honte n'est pas plus grave que leur violence."}],"choices":[{"id":"recruit","text":"Lui proposer une part pour corriger les logs","tone":"descent","dehumanization":3,"hunted":2},{"id":"steal-client","text":"Utiliser les accès d'une cliente fortunée","tone":"descent","dehumanization":2,"hunted":3},{"id":"cash-drawer","text":"Prendre la caisse et ne pas revenir","tone":"panic","dehumanization":2,"hunted":5},{"id":"report-threat","text":"Signaler les menaces et la première fraude","tone":"resistance","dehumanization":-3,"hunted":2}]},
+        {"id":"bank-offer","timer":14,"reality":"Le prêteur a compris ton accès. Il propose d'effacer la dette si tu valides six virements. Ta mère entre au bloc demain. L'audit interne commence lundi.","detail":"6 VIREMENTS · 240 000 €","psyche":[{"speaker":"thought","text":"Tu n'as plus besoin de voler. Seulement d'ouvrir la porte."},{"speaker":"voice","text":"C'est du blanchiment. Leur argent fera d'autres victimes."},{"speaker":"thought","text":"Refuser ne rendra pas les fonds propres. Cela rendra ta famille vulnérable."},{"speaker":"voice","text":"Ta mère n'a jamais demandé que tu deviennes leur employée."}],"choices":[{"id":"six-wires","text":"Valider les six virements","tone":"descent","dehumanization":3,"hunted":2},{"id":"skim-wires","text":"Valider et détourner une part pour toi","tone":"descent","dehumanization":4,"hunted":3},{"id":"fake-death","text":"Simuler ton décès et partir","tone":"panic","dehumanization":2,"hunted":5},{"id":"police-sting","text":"Accepter sous contrôle de la police","tone":"resistance","dehumanization":-2,"hunted":4}]}
+      ],
+      "finals":{
+        "descent":{"id":"bank-final-descent","timer":12,"reality":"Le réseau exige un dernier service : bloquer les alertes pendant neuf minutes. Une alerte concerne le compte de l'association qui finance l'opération de ta mère.","detail":"CONFLIT DÉTECTÉ · VALIDATION MANUELLE","psyche":[{"speaker":"thought","text":"Ne regarde pas les noms. Ce sont des lignes, pas des visages."},{"speaker":"voice","text":"Tu voles maintenant ceux qui l'ont aidée à vivre."},{"speaker":"thought","text":"Refuser rendra tous les vols précédents inutiles."},{"speaker":"voice","text":"Continuer ne les rendra jamais nécessaires."}],"choices":[{"id":"b-d1","text":"Couper toutes les alertes","tone":"descent","dehumanization":4,"hunted":2,"ending":"b01"},{"id":"b-d2","text":"Épargner l'association, trahir le réseau","tone":"descent","dehumanization":1,"hunted":5,"ending":"b02"},{"id":"b-d3","text":"Vider les comptes et fuir avec tout","tone":"panic","dehumanization":4,"hunted":5,"ending":"b03"},{"id":"b-d4","text":"Laisser les alertes et tout documenter","tone":"resistance","dehumanization":-4,"hunted":3,"ending":"b04"}]},
+        "resistance":{"id":"bank-final-resistance","timer":12,"reality":"La police propose un micro. Le prêteur sera dans la chambre de ta mère. Aucun agent ne peut entrer avant qu'il formule clairement la menace.","detail":"OPÉRATION NON GARANTIE","psyche":[{"speaker":"voice","text":"Ta mère est exposée. Dis-lui la vérité et refuse l'opération."},{"speaker":"thought","text":"Sans preuve verbale, ils classeront la menace et la dette restera."},{"speaker":"voice","text":"Elle a le droit de choisir le risque avec toi."},{"speaker":"thought","text":"Lui dire maintenant peut la tuer avant même l'opération."}],"choices":[{"id":"b-r1","text":"Porter le micro et obtenir les aveux","tone":"resistance","dehumanization":-2,"hunted":3,"ending":"b05"},{"id":"b-r2","text":"Tout dire à ta mère et quitter l'hôpital","tone":"resistance","dehumanization":-3,"hunted":2,"ending":"b06"},{"id":"b-r3","text":"Attaquer le prêteur dans la chambre","tone":"panic","dehumanization":3,"hunted":5,"ending":"b07"},{"id":"b-r4","text":"Lui donner les codes contre une trêve","tone":"descent","dehumanization":3,"hunted":3,"ending":"b08"}]},
+        "panic":{"id":"bank-final-panic","timer":10,"reality":"Tu as 600 000 € en cryptomonnaie et deux passeports. Le réseau retient ton frère. Le train part dans sept minutes. Ta mère ignore tout.","detail":"QUAI 8 · LOCALISATION INCONNUE","psyche":[{"speaker":"thought","text":"Monte. Avec l'argent, tu pourras négocier depuis un endroit sûr."},{"speaker":"voice","text":"Ton frère n'a pas sept minutes. Donne l'argent et reste."},{"speaker":"thought","text":"Ils vous tueront tous si tu perds ton seul levier."},{"speaker":"voice","text":"Appelle la police. Cesse de croire que tu contrôles encore l'engrenage."}],"choices":[{"id":"b-p1","text":"Monter dans le train avec l'argent","tone":"panic","dehumanization":2,"hunted":5,"ending":"b09"},{"id":"b-p2","text":"Livrer la totalité au réseau","tone":"panic","dehumanization":1,"hunted":4,"ending":"b10"},{"id":"b-p3","text":"Acheter une arme et négocier seule","tone":"descent","dehumanization":4,"hunted":5,"ending":"b11"},{"id":"b-p4","text":"Transmettre les portefeuilles à la police","tone":"resistance","dehumanization":-3,"hunted":3,"ending":"b12"}]}
+      },
+      "endings":{
+        "b01":{"title":"Neuf minutes","verdict":"ENRICHISSEMENT","text":"Le réseau gagne des millions et te verse ta part. L'association ferme six mois plus tard. Ta mère survit à l'opération, puis découvre d'où venait l'argent. Elle ne te rappelle pas."},
+        "b02":{"title":"La ligne épargnée","verdict":"REPRÉSAILLES","text":"L'association garde ses fonds. Le réseau comprend ton sabotage. On retrouve ta voiture vide. Ta famille reçoit chaque année une facture d'hôpital marquée payée, sans expéditeur."},
+        "b03":{"title":"Solde disponible","verdict":"CAVALE","text":"Tu prends tout. Le réseau et la police te cherchent. Tu vis dans des hôtels sans fenêtre, riche au point de ne plus pouvoir utiliser un seul euro."},
+        "b04":{"title":"Le relevé complet","verdict":"PRISON","text":"Tes documents font tomber le réseau. Ils prouvent aussi que tu l'as servi. Ta mère meurt pendant ta détention provisoire. La justice ne suspend pas le temps."},
+        "b05":{"title":"La phrase attendue","verdict":"SACRIFICE","text":"Il prononce la menace. Les agents entrent. Il tire avant de tomber et ta mère est touchée. Le dossier est parfait. La chambre, elle, ne le sera plus jamais."},
+        "b06":{"title":"Le prix choisi","verdict":"FAILLITE","text":"Vous partez. L'opération est reportée, puis financée trop tardivement. Ta mère meurt en sachant tout et en te tenant la main. Elle t'avait pardonné avant que tu demandes."},
+        "b07":{"title":"Dans la chambre","verdict":"CONDAMNATION","text":"Tu frappes la première. Sa riposte tue un infirmier. Ta mère survit, toi aussi. Le tribunal ne juge pas l'intention de sauver, mais les gestes qui ont suivi."},
+        "b08":{"title":"Trêve bancaire","verdict":"SERVITUDE","text":"La trêve dure. Les codes fonctionnent. Chaque mois apporte une nouvelle demande. Tu n'as pas sauvé ta famille : tu l'as donnée en garantie."},
+        "b09":{"title":"Quai huit","verdict":"ABANDON","text":"Le train part. Ton frère est libéré, mutilé, parce que le réseau veut que tu comprennes. L'argent reste intact. Rien de ce qu'il peut acheter ne répond à ses appels."},
+        "b10":{"title":"Dette acquittée","verdict":"MENSONGE","text":"Ils prennent tout et rendent ton frère. La police saisit ta famille pour complicité. Le réseau nie t'avoir connue. Tu as payé une dette qui n'a jamais existé sur aucun papier."},
+        "b11":{"title":"Négociation","verdict":"MORT","text":"L'arme te donne dix secondes de courage et aucune compétence. Ton frère survit à l'échange de tirs. Toi, tu meurs avant d'entendre qu'il t'appelait."},
+        "b12":{"title":"Les portefeuilles","verdict":"SURVIE PRÉCAIRE","text":"La saisie ruine le réseau et finance une protection. Ton frère revient. Ta mère est opérée grâce à une collecte. Vous vivez, mais sous d'autres noms, sans victoire à célébrer."}
+      }
+    }
+  ]
+}
